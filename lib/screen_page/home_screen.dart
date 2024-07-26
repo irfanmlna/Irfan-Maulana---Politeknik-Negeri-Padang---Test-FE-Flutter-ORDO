@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     IconButton(
                       icon: Icon(Icons.arrow_forward, color: Color(0xFF334A34)),
                       onPressed: () {
-                        // Add your navigation or action here
+             
                       },
                     ),
                   ],
@@ -294,7 +294,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 16.0), // Increased space between text and image
+                    SizedBox(width: 16.0), 
                     Image.asset(
                       'lib/assets/menu.png',
                     ),

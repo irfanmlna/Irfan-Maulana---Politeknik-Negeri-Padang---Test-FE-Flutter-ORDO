@@ -13,7 +13,7 @@ class _MenuCardState extends State<MenuCard> {
       builder: (BuildContext context) {
         return Container(
           padding: EdgeInsets.all(16.0),
-          color: Colors.white, // Set the background color to white
+          color: Colors.white,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -23,7 +23,7 @@ class _MenuCardState extends State<MenuCard> {
                   style: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF2F4530), // Title text color
+                    color: Color(0xFF2F4530), 
                   ),
                 ),
               ),
@@ -40,7 +40,7 @@ class _MenuCardState extends State<MenuCard> {
               SizedBox(height: 16.0),
               Divider(),
               SizedBox(height: 16.0),
-              // Use a GridView to create a 3x3 layout for icons or progress indicators
+             
               if (progressValues.isNotEmpty) ...[
                 GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -84,13 +84,13 @@ class _MenuCardState extends State<MenuCard> {
         Container(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Color(0xFF2F4530), // Background color for icons
+            color: Color(0xFF2F4530),
           ),
-          padding: EdgeInsets.all(8.0), // Padding inside the circular background
+          padding: EdgeInsets.all(8.0),
           child: Icon(
             icon,
             size: 32.0,
-            color: Colors.white, // Icon color
+            color: Colors.white,
           ),
         ),
         SizedBox(height: 8.0),
@@ -98,7 +98,7 @@ class _MenuCardState extends State<MenuCard> {
           text,
           style: TextStyle(
             fontSize: 14.0,
-            color: Color(0xFF2F4530), // Text color
+            color: Color(0xFF2F4530),
           ),
         ),
       ],
@@ -110,27 +110,27 @@ class _MenuCardState extends State<MenuCard> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          width: 70.0, // Adjust the width as needed
-          height: 70.0, // Adjust the height as needed
+          width: 70.0,
+          height: 70.0,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Color(0xFF2F4530), // Background color for progress indicators
+            color: Color(0xFF2F4530),
           ),
           child: Center(
             child: Stack(
               alignment: Alignment.center,
               children: [
                 CircularProgressIndicator(
-                  value: progressValue / 100, // Set the progress value
-                  strokeWidth: 5.0, // Adjust the stroke width as needed
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white), // Indicator color
+                  value: progressValue / 100,
+                  strokeWidth: 5.0,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
                 Text(
-                  '${progressValue.toInt()}%', // Display percentage in the center
+                  '${progressValue.toInt()}%',
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Text color
+                    color: Colors.white, 
                   ),
                 ),
               ],
@@ -142,7 +142,7 @@ class _MenuCardState extends State<MenuCard> {
           text,
           style: TextStyle(
             fontSize: 14.0,
-            color: Color(0xFF2F4530), // Text color
+            color: Color(0xFF2F4530), 
           ),
         ),
       ],
@@ -181,13 +181,13 @@ class _MenuCardState extends State<MenuCard> {
           switch (index) {
             case 0:
               text = 'Tahap\nPemesanan';
-              cardColor = Color(0xFF2F4530); // Dark green
-              textColor = Colors.white; // White text color for the first card
+              cardColor = Color(0xFF2F4530);
+              textColor = Colors.white;
               imageName = 'card1.png';
-              progressValue = 1.0; // 100%
-              progressColor = Color(0xFFFF5C5C); // Red color
+              progressValue = 1.0;
+              progressColor = Color(0xFFFF5C5C);
               progressText = '100%';
-              textColorForProgress = Colors.white; // White text color for the first card
+              textColorForProgress = Colors.white;
               popupTitle = 'Tahap Pemesanan';
               popupSubtitle = 'Daftar menu tahap pemesanan';
               popupIcons = [Icons.monetization_on, Icons.wallet, Icons.history];
@@ -196,19 +196,19 @@ class _MenuCardState extends State<MenuCard> {
               break;
             case 1:
               text = 'Tahap\nAdministrasi';
-              cardColor = Color(0xFFF8F8F8); // Light gray
-              textColor = Colors.black; // Black text color for other cards
+              cardColor = Color(0xFFF8F8F8);
+              textColor = Colors.black;
               imageName = 'card2.png';
-              progressValue = 0.5; // 50%
-              progressColor = Color(0xFF334A34); // Dark green
+              progressValue = 0.5;
+              progressColor = Color(0xFF334A34);
               progressText = '50%';
-              textColorForProgress = Colors.black; // Black text color for 50% progress
+              textColorForProgress = Colors.black;
               popupTitle = 'Tahap Administrasi';
               popupSubtitle = 'Daftar menu tahap administrasi';
               popupIcons = [
-                Icons.document_scanner, // Replace with the actual ruler icon
-                Icons.edit, // Replace with the actual pen icon
-                Icons.description, // Replace with the actual document icon
+                Icons.document_scanner,
+                Icons.edit,
+                Icons.description,
                 Icons.description,
                 Icons.description,
                 Icons.description,
@@ -225,18 +225,18 @@ class _MenuCardState extends State<MenuCard> {
               break;
             case 2:
               text = 'Tahap\nPembangunan';
-              cardColor = Color(0xFFF8F8F8); // Light gray
-              textColor = Colors.black; // Black text color for other cards
+              cardColor = Color(0xFFF8F8F8);
+              textColor = Colors.black;
               imageName = 'card3.png';
-              progressValue = 0.0; // 0%
-              progressColor = Colors.transparent; // No color
+              progressValue = 0.0;
+              progressColor = Colors.transparent;
               progressText = '0%';
-              textColorForProgress = Colors.black; // Default text color
+              textColorForProgress = Colors.black;
               popupTitle = 'Tahap Pembangunan';
               popupSubtitle = 'Daftar menu tahap pembangunan';
               popupIcons = [];
               popupTexts = [];
-              popupProgressValues = [5, 20, 30, 40, 5]; // Progress values for each indicator
+              popupProgressValues = [5, 20, 30, 40, 5];
               popupTexts = [
                 'Tahap\nPersiapan',
                 'Tahap\nPondasi & Struktur',
@@ -247,13 +247,13 @@ class _MenuCardState extends State<MenuCard> {
               break;
             case 3:
               text = 'Tahap\nAkad & Serah';
-              cardColor = Color(0xFFF8F8F8); // Light gray
-              textColor = Colors.black; // Black text color for other cards
+              cardColor = Color(0xFFF8F8F8);
+              textColor = Colors.black; 
               imageName = 'card4.png';
-              progressValue = 0.0; // 0%
-              progressColor = Colors.transparent; // No color
+              progressValue = 0.0;
+              progressColor = Colors.transparent;
               progressText = '0%';
-              textColorForProgress = Colors.black; // Default text color
+              textColorForProgress = Colors.black;
               popupTitle = 'Tahap Akad & Serah';
               popupSubtitle = 'Daftar menu tahap akad & serah';
               popupIcons = [Icons.handshake, Icons.description, Icons.assignment, Icons.assignment];
@@ -262,13 +262,13 @@ class _MenuCardState extends State<MenuCard> {
               break;
             default:
               text = '';
-              cardColor = Color(0xFFF8F8F8); // Default light gray
-              textColor = Colors.black; // Default text color
+              cardColor = Color(0xFFF8F8F8);
+              textColor = Colors.black;
               imageName = '';
-              progressValue = 0.0; // Default to 0%
-              progressColor = Colors.transparent; // Default color
-              progressText = '0%'; // Default text
-              textColorForProgress = Colors.black; // Default text color
+              progressValue = 0.0;
+              progressColor = Colors.transparent;
+              progressText = '0%';
+              textColorForProgress = Colors.black; 
               popupTitle = '';
               popupSubtitle = '';
               popupIcons = [];
@@ -287,7 +287,7 @@ class _MenuCardState extends State<MenuCard> {
                 fit: StackFit.expand,
                 children: [
                   Container(
-                    color: cardColor, // Apply color
+                    color: cardColor,
                   ),
                   Positioned(
                     left: 8.0,
@@ -305,9 +305,9 @@ class _MenuCardState extends State<MenuCard> {
                     right: 8.0,
                     bottom: 8.0,
                     child: Image.asset(
-                      'lib/assets/$imageName', // Path to your image assets
-                      width: 140.0, // Adjust the width as needed
-                      height: 140.0, // Adjust the height as needed
+                      'lib/assets/$imageName',
+                      width: 140.0,
+                      height: 140.0,
                     ),
                   ),
                   Positioned(
@@ -317,8 +317,8 @@ class _MenuCardState extends State<MenuCard> {
                       alignment: Alignment.center,
                       children: [
                         Container(
-                          width: 50.0, // Adjust the width as needed
-                          height: 50.0, // Adjust the height as needed
+                          width: 50.0,
+                          height: 50.0,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             boxShadow: [
@@ -331,18 +331,18 @@ class _MenuCardState extends State<MenuCard> {
                           ),
                           child: Center(
                             child: CircularProgressIndicator(
-                              value: progressValue, // Set the progress value
-                              strokeWidth: 3.0, // Adjust the stroke width as needed
-                              valueColor: AlwaysStoppedAnimation<Color>(progressColor), // Customize the color
+                              value: progressValue,
+                              strokeWidth: 3.0,
+                              valueColor: AlwaysStoppedAnimation<Color>(progressColor), 
                             ),
                           ),
                         ),
                         Text(
                           progressText,
                           style: TextStyle(
-                            fontSize: 12.0, // Adjust the font size as needed
+                            fontSize: 12.0,
                             fontWeight: FontWeight.bold,
-                            color: textColorForProgress, // Adjust color based on progress value
+                            color: textColorForProgress,
                           ),
                         ),
                       ],

@@ -70,7 +70,8 @@ class _CardCarouselState extends State<CardCarousel> {
                                 SizedBox(width: 16.0),
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                         children: [
@@ -147,13 +148,11 @@ class _CardCarouselState extends State<CardCarousel> {
                           top: 16.0,
                           right: 16.0,
                           child: ElevatedButton(
-                            onPressed: () {
-                              // Button action
-                            },
+                            onPressed: () {},
                             child: Text(
                               'Komersil',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 12),
                             ),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0xFF9ACA3E),
@@ -183,9 +182,7 @@ class _CardCarouselState extends State<CardCarousel> {
               margin: EdgeInsets.symmetric(horizontal: 4.0),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: _currentIndex == index
-                    ? Color(0xFF9ACA3E)
-                    : Colors.grey,
+                color: _currentIndex == index ? Color(0xFF9ACA3E) : Colors.grey,
               ),
             );
           }),

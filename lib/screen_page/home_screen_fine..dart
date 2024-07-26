@@ -182,7 +182,7 @@ class _HomeScreenFineState extends State<HomeScreenFine> {
                     IconButton(
                       icon: Icon(Icons.arrow_forward, color: Color(0xFF334A34)),
                       onPressed: () {
-                        // Add your navigation or action here
+                    
                       },
                     ),
                   ],
@@ -295,7 +295,7 @@ class _HomeScreenFineState extends State<HomeScreenFine> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 16.0), // Increased space between text and image
+                    SizedBox(width: 16.0),
                     Image.asset(
                       'lib/assets/menu.png',
                     ),

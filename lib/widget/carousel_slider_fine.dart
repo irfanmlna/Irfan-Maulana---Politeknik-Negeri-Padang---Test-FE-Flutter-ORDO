@@ -70,7 +70,8 @@ class _CardCarouselFineState extends State<CardCarouselFine> {
                                 SizedBox(width: 16.0),
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                         children: [
@@ -141,12 +142,12 @@ class _CardCarouselFineState extends State<CardCarouselFine> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 8.0), // Added spacing before the Divider
+                            SizedBox(height: 8.0),
                             Divider(
                               height: 1.0,
                               color: Colors.grey[300],
                             ),
-                            SizedBox(height: 8.0), // Added spacing after the Divider
+                            SizedBox(height: 8.0),
                             Row(
                               children: [
                                 Icon(
@@ -162,12 +163,12 @@ class _CardCarouselFineState extends State<CardCarouselFine> {
                                     color: Color(0xFF334A34),
                                   ),
                                 ),
-                                Spacer(), // Pushes the following widget to the right
+                                Spacer(),
                                 Container(
                                   padding: EdgeInsets.all(8.0),
                                   decoration: BoxDecoration(
                                     color: Color(0xFF334A34),
-                                    borderRadius: BorderRadius.circular(8.0), // Circular corners
+                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Row(
                                     children: [
@@ -195,13 +196,11 @@ class _CardCarouselFineState extends State<CardCarouselFine> {
                           top: 16.0,
                           right: 16.0,
                           child: ElevatedButton(
-                            onPressed: () {
-                              // Button action
-                            },
+                            onPressed: () {},
                             child: Text(
                               'Komersil',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 12),
                             ),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0xFF9ACA3E),
@@ -240,9 +239,7 @@ class _CardCarouselFineState extends State<CardCarouselFine> {
               margin: EdgeInsets.symmetric(horizontal: 4.0),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: _currentIndex == index
-                    ? Color(0xFF9ACA3E)
-                    : Colors.grey,
+                color: _currentIndex == index ? Color(0xFF9ACA3E) : Colors.grey,
               ),
             );
           }),
